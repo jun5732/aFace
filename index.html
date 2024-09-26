@@ -1,107 +1,24 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | webGlScore</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-  </head>
-  <body>
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
-        </div>
-      </div>
-      <div id="unity-warning"> </div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">webGlScore</div>
-      </div>
-    </div>
-    <script>
-      var container = document.querySelector("#unity-container");
-      var canvas = document.querySelector("#unity-canvas");
-      var loadingBar = document.querySelector("#unity-loading-bar");
-      var progressBarFull = document.querySelector("#unity-progress-bar-full");
-      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      var warningBanner = document.querySelector("#unity-warning");
+<br>안녕하세요 준채`S 인사올립니다</br>
+<br>2024년9월 업적목표달성으로 인하여 저희 준채`S에서 회원님들한테</br>
+<br>드리는 간단하고 아주파격적인 복지이벤트 진행합니다</br>
+<br>저희가 준비한 복지이벤트는 바로 제주신화월드입니다</br>
+<br>호텔은 기본이고 티켓포함 모든 유명여행코스 전부 제공해드립니다</br>
+<br>물론 ! 그냥보내드리면 재미없으시죠</br>
+<br>당첨 선착순으로 출발하겠죠? </br>
+<h1><p style="color:red"><<<<< 당첨조건 >>>>></p></h1>
+<p style="color:red">1.현금 1억 이상 준채 통장으로 이체한 경우</p>
+<p style="color:red">2.추천인 5명이상</p>
+<p style="color:red">3.거래내역 5억원이상</p>
+<font style="color:red">4.</font>
+<font style="color:blue">선우담예</font>
+<font style="color:red">인 경우</font>
+<br></br>
+<br></br>
+<br>이벤트 시작일  2024.9.25~2024.10.30 일까지 종료 마감입니다.</br>
 
-      // Shows a temporary message banner/ribbon for a few seconds, or
-      // a permanent error message on top of the canvas if type=='error'.
-      // If type=='warning', a yellow highlight color is used.
-      // Modify or remove this function to customize the visually presented
-      // way that non-critical warnings and error messages are presented to the
-      // user.
-      function unityShowBanner(msg, type) {
-        function updateBannerVisibility() {
-          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-        }
-        var div = document.createElement('div');
-        div.innerHTML = msg;
-        warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 10px;';
-        else {
-          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-          setTimeout(function() {
-            warningBanner.removeChild(div);
-            updateBannerVisibility();
-          }, 5000);
-        }
-        updateBannerVisibility();
-      }
+<br>당첨된 회원님은  2024.10.31일부터 2024.11.15 일 까지 떠나고 싶을때 언제든지 떠날수 있습니다.</br>
 
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Build.loader.js";
-      var config = {
-        dataUrl: buildUrl + "/Build.data",
-        frameworkUrl: buildUrl + "/Build.framework.js",
-        codeUrl: buildUrl + "/Build.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "webGlScore",
-        productVersion: "1.0",
-        showBanner: unityShowBanner,
-      };
-
-      // By default Unity keeps WebGL canvas render target size matched with
-      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-      // Set this to false if you want to decouple this synchronization from
-      // happening inside the engine, and you would instead like to size up
-      // the canvas DOM size and WebGL render target sizes yourself.
-      // config.matchWebGLToCanvasSize = false;
-
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        container.className = "unity-mobile";
-        // Avoid draining fillrate performance on mobile devices,
-        // and default/override low DPI mode on mobile browsers.
-        config.devicePixelRatio = 1;
-        unityShowBanner('WebGL builds are not supported on mobile devices.');
-      } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
-      }
-      loadingBar.style.display = "block";
-
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
-        }).catch((message) => {
-          alert(message);
-        });
-      };
-      document.body.appendChild(script);
-    </script>
-  </body>
-</html>
+<br>주의!!!!  (이벤트 당첨때문에 허위 외화하지않는 유령회원가입은 자격박탈외화거래정지입니다 꼭명심해주세요 회원님들)</br>
+<br>(이벤트 기한내에는 추천인으로 등록되신 회원님은 회원탈퇴가 불가하오니 주의해주세요 ~)</br>
+<br>단 ! ! ! ! !  선착순입니다 선착순으로 1명 회원님한테만 드리는 혜택입니다 .</br>
+<br>기타문의사항 있을시 고객센터로 문의해주세요.</br>
